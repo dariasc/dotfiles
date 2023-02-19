@@ -1,0 +1,13 @@
+#! /bin/sh
+
+while read -r msg; do
+if echo "$msg" | jq -e '.action == "request password"' 1>/dev/null 2>/dev/null
+then
+    response="$(printf '' | tofi  --require-match=false --hidden-character='*' --hide-input=true --prompt-text='pass: ' --height=96)"
+
+    if test -z "$response"
+    then echo '{"action":"cancel"}'
+    else echo "{\"action\":\"authenticate\",\"password\": \"$response\"}"
+    fi
+fi
+done
