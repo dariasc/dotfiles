@@ -1,0 +1,72 @@
+{
+  "layer": "top",
+  "margin": "0 12px",
+  "modules-left": [
+    "wlr/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "backlight",
+    "pulseaudio",
+    "network",
+    "battery"
+  ],
+  "wlr/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": true
+  },
+  "clock": {
+    "format": "<span color='#f38ba8'> </span>{:%H:%M}"
+  },
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "format": "<span color='#f38ba8'>{icon}</span> {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "pulseaudio": {
+    "format": "<span color='#f38ba8'>{icon}</span> {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    }
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "<span color='#f38ba8'> </span> {essid}",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "<span color='#f38ba8'>󰖪 </span> No Network"
+  },
+  "battery": {
+    "format": "<span color='#f38ba8'>{icon}</span> {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-charging": "<span color='#f38ba8'></span> {capacity}%"
+  }
+}

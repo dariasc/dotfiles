@@ -1,0 +1,25 @@
+{
+    "security.workspace.trust.enabled": false,
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "catppuccin.colorOverrides": {
+        "mocha": {
+            "base": "#090909",
+            "mantle": "#0c0c0c",
+            "crust": "#0f0f0f"
+        }
+    },
+    "window.menuBarVisibility": "hidden",
+    "workbench.iconTheme": "chalice-icon-theme",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.simpleDialog.enable": true,
+    "editor.fontFamily": "'BlexMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

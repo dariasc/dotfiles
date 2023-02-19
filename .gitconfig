@@ -1,0 +1,10 @@
+[user]
+	email = dariascauas@gmail.com
+	name = Diego Arias
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEDmpDZC9LzB3Qe3+ca26J302MrYgrHgmzRN7iXNqj1+
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true

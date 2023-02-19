@@ -1,0 +1,96 @@
+@import "mocha.css";
+
+* {
+  font-family: BlexMono Nerd Font;
+  font-size: 18px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  padding: 0px 12px;
+}
+
+#workspaces {
+  border-radius: 0.25rem;
+  background-color: @base;
+  margin: 8px 0px 0px 0px;
+  border: 1px solid #303030;
+}
+
+#workspaces button {
+  color: #666666;
+  border-radius: 0.25rem;
+  padding: 12px 8px;
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  color: white;
+  border-radius: 0.25rem;
+}
+
+#workspaces button:hover {
+  color: black;
+  background-color: white;
+  border-radius: 0.25rem;
+}
+
+#tray,
+#network,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power {
+  border: 1px solid #303030;
+  background-color: @base;
+  margin: 8px 0px 0px 8px;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+}
+
+#clock {
+  color: @text;
+}
+
+#battery {
+  color: @text;
+  padding: 5px 15px;
+}
+
+#network {
+  color: @text;
+}
+
+#backlight {
+  color: @text;
+}
+
+#pulseaudio {
+  color: @text;
+}
+
+#pulseaudio.muted {
+  color: @red;
+}
+
+#custom-power {
+  border-radius: 1rem;
+  color: @red;
+  margin-bottom: 1rem;
+}
+
+#tray {
+  border-radius: 1rem;
+}
+
+tooltip {
+  background: @base;
+  border: 1px solid @pink;
+}
+
+tooltip label {
+  color: @text;
+}
