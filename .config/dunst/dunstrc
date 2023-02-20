@@ -19,6 +19,8 @@
     min_icon_size = 96
     max_icon_size = 96
 
+    timeout = 5
+
     show_indicators = no
 
     mouse_left_click = close_current
