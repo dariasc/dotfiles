@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case $(printf "%s\n" "shut down" "reboot" "suspend" | tofi --prompt-text="power: " $@) in
+case $(printf "%s\n" "suspend" "reboot" "shut down" | tofi --prompt-text="power: " --height=240 $@) in
 	"shut down")
 		systemctl poweroff
 		;;

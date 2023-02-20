@@ -10,6 +10,15 @@ window {
   background-color: transparent;
 }
 
+tooltip {
+  background-color: black;
+  border: 1px solid #303030;
+}
+
+tooltip label {
+  color: @text;
+}
+
 #workspaces {
   border-radius: 8px;
   background-color: @base;
