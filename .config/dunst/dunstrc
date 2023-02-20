@@ -1,0 +1,26 @@
+[global]
+    width = 512
+    height = 128
+    offset = 12x12
+    gap_size = 8
+    padding = 16
+    horizontal_padding = 16
+    frame_width = 1
+    frame_color = "#404040"
+
+    corner_radius = 8
+
+    background = "#090909"
+    foreground = "#ffffff"
+
+    font = "BlexMono Nerd Font" 16
+
+    icon_corner_radius = 8
+    min_icon_size = 96
+    max_icon_size = 96
+
+    show_indicators = no
+
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
