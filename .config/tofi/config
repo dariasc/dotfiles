@@ -13,7 +13,7 @@ outline-width = 0
 border-width = 1
 border-color = #404040
 
-corner-radius = 4
+corner-radius = 8
 
 padding-top = 24
 padding-bottom = 24
