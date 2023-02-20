@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case $(printf "%s\n" "shut down" "reboot" "suspend" | tofi --prompt-text="power: " $@) in
+	"shut down")
+		systemctl poweroff
+		;;
+	"reboot")
+		systemctl reboot
+		;;
+	"suspend")
+		systemctl suspend
+		;;
+esac
