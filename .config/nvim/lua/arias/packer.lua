@@ -42,6 +42,8 @@ return require('packer').startup(function(use)
         })
     end}
 
+    use 'jbyuki/nabla.nvim'
+
     use { 'mbbill/undotree' }
     use { 'tpope/vim-fugitive' }
     use {

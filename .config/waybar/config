@@ -24,7 +24,7 @@
   },
   "custom/power": {
     "format": "<span color='#ffffff'>󰐥</span>",
-    "on-click": "gamemoderun ~/.local/bin/tofi-power-menu",
+    "on-click": "~/.local/bin/tofi-power-menu && sudo ydotool click 0xc1",
   },
   "backlight": {
     "device": "amdgpu_bl0",
