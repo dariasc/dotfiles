@@ -1,4 +1,4 @@
-font = "BlexMono Nerd Font"
+font = "/usr/share/fonts/TTF/Blex-Mono-Nerd-Font-Complete.ttf"
 font-size = 24
 
 selection-color = #f38ba8

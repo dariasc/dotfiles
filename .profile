@@ -1,8 +1,8 @@
-export PATH="/home/arias/.local/bin:${PATH}"
+export PATH="/home/arias/.local/bin:/home/arias/.cargo/bin:${PATH}"
+export ZEIT_DB=~/.config/zeit.db
 
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_SCALE_FACTOR=1.5 
-export QT_STYLE_OVERRIDE=kvantum
 
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache

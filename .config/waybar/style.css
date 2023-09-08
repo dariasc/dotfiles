@@ -20,7 +20,7 @@ tooltip label {
 }
 
 #workspaces {
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: @base;
   border: 1px solid #404040;
 }
@@ -41,16 +41,16 @@ tooltip label {
   background-color: white;
 }
 
-#custom-power,
 #network,
 #backlight,
 #clock,
 #battery,
+#custom-wireguard,
 #pulseaudio {
   border: 1px solid #404040;
   background-color: @base;
   padding: 4px 16px;
-  border-radius: 8px;
+  border-radius: 12px;
   color: @text;
   margin-left: 8px;
 }
