@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "margin": "12px 12px 0px 12px",
+  "modules-left": [
+    "river/tags"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/wireguard",
+    "network",
+    "backlight",
+    "pulseaudio",
+    "battery",
+  ],
+  "river/tags": {
+    "num-tags": 7,
+    "set-tags": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ]
+  },
+  "clock": {
+    "format": "{:%b %d | %H:%M}",
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "format": "<span color='#ffffff'>{icon}</span> {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "<span color='#ffffff'>{icon}</span> {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": [
+        "󰖀",
+        "󰕾"
+      ]
+    }
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "<span color='#ffffff'> </span> {essid}",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "<span color='#ffffff'>󰖪 </span> No Network",
+    "tooltip": false
+  },
+  "custom/wireguard": {
+    "exec": "~/.local/bin/wireguard-status short",
+    "format": "<span color='#ffffff'>󰌆 </span> {}",
+    "return-type": "json",
+    "interval": 2,
+  },
+  "battery": {
+    "format": "<span color='#ffffff'>{icon}</span> {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-charging": "<span color='#ffffff'></span> {capacity}%"
+  }
+}

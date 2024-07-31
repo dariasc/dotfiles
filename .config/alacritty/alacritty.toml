@@ -1,0 +1,26 @@
+import = ["~/.config/alacritty/mocha.toml"]
+
+[shell]
+program = "/usr/bin/fish"
+
+[window]
+padding = { x = 12, y = 12 }
+
+[font]
+size = 16
+
+[font.normal]
+family = "MartianMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "MartianMono Nerd Font"
+style = "Regular"
+
+[font.italic]
+family = "MartianMono Nerd Font"
+style = "Regular"
+
+[font.bold_italic]
+family = "MartianMono Nerd Font"
+style = "Regular"
