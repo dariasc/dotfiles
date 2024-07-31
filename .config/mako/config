@@ -1,0 +1,24 @@
+max-visible=5
+sort=-time
+
+width=512
+height=128
+margin=12
+padding=16
+border-size=1
+
+background-color=#090909
+text-color=#ffffff
+border-color=#909090
+
+font=MartianMono Nerd Font 16
+
+icons=1
+max-icon-size=96
+icon-location=left
+
+default-timeout=5000
+
+on-button-left=dismiss
+on-button-middle=invoke-default-action
+on-button-right=dismiss-all

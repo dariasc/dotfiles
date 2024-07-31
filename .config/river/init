@@ -7,6 +7,9 @@ swaybg -i "/home/arias/.local/wallpapers/de_jong.png" &
 # Run waybar
 riverctl spawn waybar
 
+# Run mako
+riverctl spawn mako
+
 # Super+Tab spawn tofi
 riverctl map normal Super Tab spawn "tofi-drun | xargs -i riverctl spawn '{}'"
 
