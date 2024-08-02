@@ -16,6 +16,9 @@ riverctl spawn mako
 # Run polkit
 riverctl spawn "cmd-polkit-agent -s -c '/home/arias/.local/bin/tofi-polkit-agent'"
 
+# Super+S
+riverctl map normal Super S spawn "slurp | grim -g - - | wl-copy"
+
 # Super+Tab spawn tofi
 riverctl map normal Super Tab spawn "tofi-drun | xargs -i riverctl spawn '{}'"
 
