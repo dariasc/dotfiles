@@ -24,6 +24,15 @@
       16,
       32,
       64
+    ],
+    "tag-labels": [
+      "",
+      "2",
+      "3",
+      "4",
+      "",
+      "",
+      "",
     ]
   },
   "clock": {
@@ -32,58 +41,51 @@
   },
   "backlight": {
     "device": "amdgpu_bl0",
-    "format": "<span color='#ffffff'>{icon}</span> {percent}%",
+    "format": "<span color='#fff'>{icon}</span> {percent}%",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󰃜",
+      "󰃛",
+      "󰃚"
     ],
     "tooltip": false
   },
   "pulseaudio": {
-    "format": "<span color='#ffffff'>{icon}</span> {volume}%",
-    "format-muted": "󰝟",
+    "format": "<span color='#fff'>{icon}</span> {volume}%",
+    "format-muted": "",
     "format-icons": {
       "default": [
-        "󰖀",
-        "󰕾"
+        "",
+        " ",
+        " "
       ]
     }
   },
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "<span color='#ffffff'> </span> {essid}",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-disconnected": "<span color='#ffffff'>󰖪 </span> No Network",
+    "format-wifi": "<span color='#fff'> </span> {essid}",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "Disconnected",
+    "format-linked": "<span color='#fff'></span> No Network",
+    "format-disabled": "Disabled",
     "tooltip": false
   },
   "custom/wireguard": {
     "exec": "~/.local/bin/wireguard-status short",
-    "format": "<span color='#ffffff'>󰌆 </span> {}",
+    "format": "<span color='#fff'>󰌆 </span> {}",
     "return-type": "json",
     "interval": 2,
   },
   "battery": {
-    "format": "<span color='#ffffff'>{icon}</span> {capacity}%",
+    "interval": 10,
+    "format": "<span color='#fff'>{icon} </span> {capacity}%",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "",
+      "",
+      "",
+      "", 
+      ""
     ],
-    "format-charging": "<span color='#ffffff'></span> {capacity}%"
+    "format-charging": "<span color='#d7ffc2'>{icon} </span> {capacity}%",
   }
 }
