@@ -2,7 +2,7 @@
 
 # Background
 riverctl background-color 0x000000
-swaybg -i "/home/arias/.local/wallpapers/de_jong.png" &
+riverctl spawn "swaybg -i '/home/arias/.local/wallpapers/de_jong.png'"
 
 # Keyboard layout
 riverctl keyboard-layout -variant altgr-intl us
@@ -12,6 +12,9 @@ riverctl spawn waybar
 
 # Run mako
 riverctl spawn mako
+
+# Run polkit
+riverctl spawn "cmd-polkit-agent -s -c '/home/arias/.local/bin/tofi-polkit-agent'"
 
 # Super+Tab spawn tofi
 riverctl map normal Super Tab spawn "tofi-drun | xargs -i riverctl spawn '{}'"
