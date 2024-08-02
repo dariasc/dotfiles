@@ -4,6 +4,9 @@
 riverctl background-color 0x000000
 swaybg -i "/home/arias/.local/wallpapers/de_jong.png" &
 
+# Keyboard layout
+riverctl keyboard-layout -variant altgr-intl us
+
 # Run waybar
 riverctl spawn waybar
 
@@ -18,6 +21,9 @@ riverctl map normal Super Q spawn alacritty
 
 # Super+Q to close the focused view
 riverctl map normal Super C close
+
+# Super+D to suspend
+riverctl map normal Super D spawn "systemctl suspend"
 
 # Super+Shift+E to exit river
 riverctl map normal Super+Shift E exit
@@ -144,6 +150,10 @@ riverctl set-repeat 25 300
 
 # Set window rules
 riverctl rule-add -app-id firefox ssd
+riverctl rule-add -app-id firefox tags 1
+riverctl rule-add -app-id Spotify tags $((1 << 4))
+riverctl rule-add -app-id Signal tags $((1 << 5))
+riverctl rule-add -app-id thunderbird tags $((1 << 6))
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
