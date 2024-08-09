@@ -13,6 +13,9 @@ riverctl spawn waybar
 # Run mako
 riverctl spawn mako
 
+# Run poweralertd
+riverctl spawn poweralertd
+
 # Run polkit
 riverctl spawn "cmd-polkit-agent -s -c '/home/arias/.local/bin/tofi-polkit-agent'"
 
@@ -155,6 +158,7 @@ riverctl border-width 1
 riverctl set-repeat 25 300
 
 # Set window rules
+riverctl rule-add -app-id org.pwmt.zathura ssd
 riverctl rule-add -app-id firefox ssd
 riverctl rule-add -app-id firefox tags 1
 riverctl rule-add -app-id Spotify tags $((1 << 4))
@@ -168,8 +172,8 @@ rivertile -view-padding 6 -outer-padding 6 &
 
 # Misc.
 riverctl focus-follows-cursor normal
-riverctl input 'pointer-*' natural-scroll enabled
-riverctl input 'pointer-*' tap enabled
+riverctl input pointer-1739-52804-MSFT0001:00_06CB:CE44_Touchpad natural-scroll enabled
+riverctl input pointer-1739-52804-MSFT0001:00_06CB:CE44_Touchpad tap enabled
 
 # Late startup
 riverctl spawn '1password --silent'
