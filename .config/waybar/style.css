@@ -46,6 +46,7 @@ tooltip label {
 #clock,
 #battery,
 #custom-wireguard,
+#custom-mouse,
 #pulseaudio {
   border: 1px solid #404040;
   background-color: @base;

@@ -8,6 +8,7 @@
     "clock"
   ],
   "modules-right": [
+    "custom/mouse",
     "custom/wireguard",
     "network",
     "backlight",
@@ -15,7 +16,7 @@
     "battery",
   ],
   "river/tags": {
-    "num-tags": 7,
+    "num-tags": 8,
     "set-tags": [
       1,
       2,
@@ -23,13 +24,15 @@
       8,
       16,
       32,
-      64
+      64,
+      128
     ],
     "tag-labels": [
       "",
       "2",
       "3",
       "4",
+      "5",
       "",
       "",
       "",
@@ -51,7 +54,7 @@
   },
   "pulseaudio": {
     "format": "<span color='#fff'>{icon}</span> {volume}%",
-    "format-muted": "",
+    "format-muted": "<span color='#fff'> </span>",
     "format-icons": {
       "default": [
         "",
@@ -74,7 +77,7 @@
     "exec": "~/.local/bin/wireguard-status short",
     "format": "<span color='#fff'>󰌆 </span> {}",
     "return-type": "json",
-    "interval": 2,
+    "interval": 5,
   },
   "battery": {
     "interval": 10,
@@ -87,5 +90,12 @@
       ""
     ],
     "format-charging": "<span color='#d7ffc2'>{icon} </span> {capacity}%",
+  },
+  "custom/mouse": {
+    "exec": "~/.local/bin/vxe-battery-level",
+    "format": "<span color='#fff'>󰍽</span> {}",
+    "return-type": "json",
+    "interval": 5,
+    "hide-empty-text": true
   }
 }

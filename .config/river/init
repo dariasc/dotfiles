@@ -1,5 +1,14 @@
 #!/bin/sh
 
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+riverctl spawn 'exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"'
+
+# Defaults
+xdg-settings set default-web-browser firefox.desktop
+
+riverctl xcursor-theme breeze_cursors
+
 # Background
 riverctl background-color 0x000000
 riverctl spawn "swaybg -i '/home/arias/.local/wallpapers/de_jong.png'"
@@ -25,14 +34,14 @@ riverctl map normal Super S spawn "slurp | grim -g - - | wl-copy"
 # Super+Tab spawn tofi
 riverctl map normal Super Tab spawn "tofi-drun | xargs -i riverctl spawn '{}'"
 
-# Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
+# Super+Shift+Return to start an instance of alacritty
 riverctl map normal Super Q spawn alacritty
 
 # Super+Q to close the focused view
 riverctl map normal Super C close
 
 # Super+D to suspend
-riverctl map normal Super D spawn "systemctl suspend"
+riverctl map normal Super Escape spawn "systemctl suspend"
 
 # Super+Shift+E to exit river
 riverctl map normal Super+Shift E exit
@@ -161,9 +170,10 @@ riverctl set-repeat 25 300
 riverctl rule-add -app-id org.pwmt.zathura ssd
 riverctl rule-add -app-id firefox ssd
 riverctl rule-add -app-id firefox tags 1
-riverctl rule-add -app-id Spotify tags $((1 << 4))
-riverctl rule-add -app-id Signal tags $((1 << 5))
-riverctl rule-add -app-id thunderbird tags $((1 << 6))
+riverctl rule-add -app-id Spotify tags $((1 << 5))
+riverctl rule-add -app-id Signal tags $((1 << 6))
+riverctl rule-add -app-id thunderbird tags $((1 << 7))
+riverctl rule-add -app-id com.mitchellh.ghostty ssd
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
