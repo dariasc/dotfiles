@@ -22,6 +22,7 @@ tooltip label {
 #tags {
   background-color: @base;
   border: 1px solid #404040;
+  margin-right: 8px;
 }
 
 #tags button {
@@ -39,6 +40,14 @@ tooltip label {
 #tags button:hover {
   color: black;
   background-color: white;
+}
+
+#custom-zeit {
+  border: 1px solid #404040;
+  background-color: @base;
+  padding: 4px 16px;
+  color: @text;
+  margin-right: 8px;
 }
 
 #network,

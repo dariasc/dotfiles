@@ -6,8 +6,8 @@ then
     response="$(printf '' | tofi --font='/usr/share/fonts/TTF/MartianMonoNerdFontMono-Regular.ttf' --require-match=false --hidden-character='*' --hide-input=true --prompt-text='pass: ' --height=96)"
 
     if test -z "$response"
-    then echo '{"action":"cancel"}'
-    else echo "{\"action\":\"authenticate\",\"password\": \"$response\"}"
+    then echo "{\"action\":\"cancel\"}"
+    else echo "{\"action\":\"authenticate\",\"password\":\"$response\"}"
     fi
 fi
 done

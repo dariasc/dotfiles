@@ -1,4 +1,4 @@
-set cin aw ai is ts=4 sw=4 nu noeb bg=dark ru cb=unnamedplus et
+set cin aw ai is ts=2 sw=2 nu noeb bg=dark ru cb=unnamedplus et
 sy on
 ino jk <esc> | ino kj <esc>
 ino {<CR> {<CR>}<Esc>ko

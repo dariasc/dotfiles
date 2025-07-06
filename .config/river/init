@@ -1,17 +1,17 @@
 #!/bin/sh
 
+# Background
+riverctl background-color 0x000000
+riverctl spawn "swaybg -i '/home/arias/.local/wallpapers/de_jong.png'"
+
 export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
-riverctl spawn 'exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"'
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river _JAVA_AWT_WM_NONREPARENTING=1
+riverctl spawn 'exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP _JAVA_AWT_WM_NONREPARENTING"'
 
 # Defaults
 xdg-settings set default-web-browser firefox.desktop
 
 riverctl xcursor-theme breeze_cursors
-
-# Background
-riverctl background-color 0x000000
-riverctl spawn "swaybg -i '/home/arias/.local/wallpapers/de_jong.png'"
 
 # Keyboard layout
 riverctl keyboard-layout -variant altgr-intl us
@@ -182,8 +182,8 @@ rivertile -view-padding 6 -outer-padding 6 &
 
 # Misc.
 riverctl focus-follows-cursor normal
-riverctl input pointer-1739-52804-MSFT0001:00_06CB:CE44_Touchpad natural-scroll enabled
-riverctl input pointer-1739-52804-MSFT0001:00_06CB:CE44_Touchpad tap enabled
+riverctl input pointer-1739-52804-SYNA2BA6:00_06CB:CE44_Touchpad natural-scroll enabled
+riverctl input pointer-1739-52804-SYNA2BA6:00_06CB:CE44_Touchpad tap enabled
 
 # Late startup
 riverctl spawn '1password --silent'

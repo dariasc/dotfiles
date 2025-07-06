@@ -2,7 +2,8 @@
   "layer": "top",
   "margin": "12px 12px 0px 12px",
   "modules-left": [
-    "river/tags"
+    "river/tags",
+    "custom/zeit",
   ],
   "modules-center": [
     "clock"
@@ -64,7 +65,7 @@
     }
   },
   "network": {
-    "interface": "wlan0",
+    "interface": "wlp1s0",
     "format": "{ifname}",
     "format-wifi": "<span color='#fff'> </span> {essid}",
     "format-ethernet": "{ipaddr}/{cidr} ",
@@ -73,11 +74,17 @@
     "format-disabled": "Disabled",
     "tooltip": false
   },
+  "custom/zeit": {
+    "format": "{}",
+    "exec": "~/.local/bin/zeit-waybar-tofi",
+    "on-click": "~/.local/bin/zeit-waybar-tofi click",
+    "interval": 1
+  },
   "custom/wireguard": {
     "exec": "~/.local/bin/wireguard-status short",
     "format": "<span color='#fff'>󰌆 </span> {}",
     "return-type": "json",
-    "interval": 5,
+    "interval": 10,
   },
   "battery": {
     "interval": 10,
@@ -92,10 +99,10 @@
     "format-charging": "<span color='#d7ffc2'>{icon} </span> {capacity}%",
   },
   "custom/mouse": {
-    "exec": "~/.local/bin/vxe-battery-level",
+    "exec": "~/.local/bin/vxe-battery-level-waybar",
     "format": "<span color='#fff'>󰍽</span> {}",
     "return-type": "json",
-    "interval": 5,
+    "interval": 1,
     "hide-empty-text": true
   }
 }
