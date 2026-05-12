@@ -130,6 +130,10 @@ format = "i3bar"
 exec = "i3status"
 
 [[windows]]
+match.app-id = "1password"
+initial-tile-state = "floating"
+
+[[windows]]
 match.app-id = "org.pulseaudio.pavucontrol"
 initial-tile-state = "floating"
 
