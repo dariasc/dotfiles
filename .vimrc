@@ -2,7 +2,6 @@ set cin aw ai is ts=2 sw=2 nu noeb bg=dark ru cb=unnamedplus et
 sy on
 ino jk <esc> | ino kj <esc>
 ino {<CR> {<CR>}<Esc>ko
-no ; :
 ca Hash w !cpp -dD -P -fpreprocessed \| tr -d '[:space:]' \| md5sum \| cut -c-6
 
 call plug#begin()
