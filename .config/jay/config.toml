@@ -28,6 +28,14 @@ match = {
 }
 gfx-api = "OpenGl"
 
+[[outputs]]
+match.serial-number = "804"
+mode = {
+    width = 1920,
+    height = 1080,
+    refresh-rate = 143.855,
+}
+
 [[inputs]]
 match.is-gesture = true
 natural-scrolling = true
