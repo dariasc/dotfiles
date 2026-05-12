@@ -1,0 +1,141 @@
+keymap = """
+    xkb_keymap {
+        xkb_keycodes { include "evdev+aliases(qwerty)" };
+        xkb_types    { include "complete"              };
+        xkb_compat   { include "complete"              };
+        xkb_symbols  { include "pc+us+inet(evdev)"     };
+    };
+    """
+
+on-graphics-initialized = [
+    { type = "exec", exec = "mako" },
+    { type = "exec", exec = "wl-tray-bridge" },
+    { type = "exec", exec = { shell = "swaybg -i /home/arias/.local/wallpapers/andreas-rocha-minastirith01.png -m fill" }},
+]
+
+window-management-key = "Super_L"
+workspace-display-order = "sorted"
+middle-click-paste = false
+use-hardware-cursor = false
+
+[env]
+GTK_THEME = "Adwaita:dark"
+
+[[drm-devices]]
+match = {
+    pci-vendor = 0x8086,
+    pci-model = 0x7d45,
+}
+gfx-api = "OpenGl"
+
+[[inputs]]
+match.is-gesture = true
+natural-scrolling = true
+
+[[clients]]
+match.all = []
+capabilities = "all"
+
+[shortcuts]
+logo-h = "focus-left"
+logo-j = "focus-down"
+logo-k = "focus-up"
+logo-l = "focus-right"
+
+logo-shift-h = "move-left"
+logo-shift-j = "move-down"
+logo-shift-k = "move-up"
+logo-shift-l = "move-right"
+
+logo-d = "split-horizontal"
+logo-v = "split-vertical"
+
+logo-t = "toggle-split"
+logo-m = "toggle-mono"
+logo-u = "toggle-fullscreen"
+
+logo-f = "focus-parent"
+logo-c = "open-control-center"
+logo-q = "close"
+logo-shift-f = "toggle-floating"
+logo-a = { type = "exec", exec = "alacritty" }
+logo-Tab = { type = "exec", exec = ["bemenu-run", "-p run", "--fn=MartianMono NFM 10", "--hf=#90a2b6", "--tf=#90a2b6"] }
+logo-shift-e = "quit"
+logo-shift-r = "reload-config-toml"
+
+logo-1 = { type = "show-workspace", name = "1" }
+logo-2 = { type = "show-workspace", name = "2" }
+logo-3 = { type = "show-workspace", name = "3" }
+logo-4 = { type = "show-workspace", name = "4" }
+logo-5 = { type = "show-workspace", name = "5" }
+logo-6 = { type = "show-workspace", name = "6" }
+logo-7 = { type = "show-workspace", name = "7" }
+logo-8 = { type = "show-workspace", name = "8" }
+logo-9 = { type = "show-workspace", name = "9" }
+
+logo-shift-1 = { type = "move-to-workspace", name = "1" }
+logo-shift-2 = { type = "move-to-workspace", name = "2" }
+logo-shift-3 = { type = "move-to-workspace", name = "3" }
+logo-shift-4 = { type = "move-to-workspace", name = "4" }
+logo-shift-5 = { type = "move-to-workspace", name = "5" }
+logo-shift-6 = { type = "move-to-workspace", name = "6" }
+logo-shift-7 = { type = "move-to-workspace", name = "7" }
+logo-shift-8 = { type = "move-to-workspace", name = "8" }
+logo-shift-9 = { type = "move-to-workspace", name = "9" }
+
+logo-ctrl-shift-Right = {
+    type = "move-to-output",
+    direction = "right",
+}
+logo-ctrl-shift-Left = {
+    type = "move-to-output",
+    direction = "left",
+}
+
+ctrl-alt-F1 = { type = "switch-to-vt", num = 1 }
+ctrl-alt-F2 = { type = "switch-to-vt", num = 2 }
+ctrl-alt-F3 = { type = "switch-to-vt", num = 3 }
+ctrl-alt-F4 = { type = "switch-to-vt", num = 4 }
+ctrl-alt-F5 = { type = "switch-to-vt", num = 5 }
+ctrl-alt-F6 = { type = "switch-to-vt", num = 6 }
+ctrl-alt-F7 = { type = "switch-to-vt", num = 7 }
+ctrl-alt-F8 = { type = "switch-to-vt", num = 8 }
+ctrl-alt-F9 = { type = "switch-to-vt", num = 9 }
+ctrl-alt-F10 = { type = "switch-to-vt", num = 10 }
+ctrl-alt-F11 = { type = "switch-to-vt", num = 11 }
+ctrl-alt-F12 = { type = "switch-to-vt", num = 12 }
+
+Print = { type = "exec", exec = { shell = "grim -g \"$(slurp)\" - | wl-copy" } }
+ctrl-Print = { type = "exec", exec = { shell = "grim - | wl-copy" } }
+
+XF86AudioRaiseVolume = { type = "exec", exec = ["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+", "-l", "1.0"] }
+XF86AudioLowerVolume = { type = "exec", exec = ["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-"] }
+XF86AudioMute = { type = "exec", exec = ["wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle"] }
+
+[theme]
+font = "Martian Mono 8"
+focused-title-bg-color = "#303c4a"
+border-width = 3
+
+[status]
+format = "i3bar"
+exec = "i3status"
+
+[[windows]]
+match.app-id = "org.pulseaudio.pavucontrol"
+initial-tile-state = "floating"
+
+[[windows]]
+match.app-id = "signal"
+action = { type = "move-to-workspace", name = "7" }
+
+[[windows]]
+match.app-id = "eu.betterbird.Betterbird"
+action = { type = "move-to-workspace", name = "8" }
+
+[[windows]]
+match.app-id = "spotify"
+action = { type = "move-to-workspace", name = "9" }
+
+[xwayland]
+enabled = false
