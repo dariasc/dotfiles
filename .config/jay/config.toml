@@ -67,7 +67,7 @@ logo-c = "open-control-center"
 logo-q = "close"
 logo-shift-f = "toggle-floating"
 logo-a = { type = "exec", exec = "alacritty" }
-logo-Tab = { type = "exec", exec = ["bemenu-run", "-p run", "--fn=MartianMono NFM 10", "--hf=#90a2b6", "--tf=#90a2b6"] }
+logo-Tab = { type = "exec", exec = { shell = "j4-dmenu-desktop --dmenu='bemenu-run -p run --fn=\"MartianMono NFM 10\" --hf=#90a2b6 --tf=#90a2b6'" }}
 logo-shift-e = "quit"
 logo-shift-r = "reload-config-toml"
 
