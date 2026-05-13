@@ -113,8 +113,8 @@ ctrl-alt-F10 = { type = "switch-to-vt", num = 10 }
 ctrl-alt-F11 = { type = "switch-to-vt", num = 11 }
 ctrl-alt-F12 = { type = "switch-to-vt", num = 12 }
 
-Print = { type = "exec", exec = { shell = "grim -g \"$(slurp)\" - | wl-copy" } }
-ctrl-Print = { type = "exec", exec = { shell = "grim - | wl-copy" } }
+logo-s = { type = "exec", exec = { shell = "grim -g \"$(slurp)\" - | wl-copy" } }
+shift-logo-s = { type = "exec", exec = { shell = "grim - | wl-copy" } }
 
 XF86AudioRaiseVolume = { type = "exec", exec = ["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+", "-l", "1.0"] }
 XF86AudioLowerVolume = { type = "exec", exec = ["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-"] }
