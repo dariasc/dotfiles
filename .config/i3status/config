@@ -4,6 +4,7 @@ general {
 
 order += "volume master"
 order += "wireless wlan0"
+order += "wireless wg0"
 order += "battery 0"
 order += "tztime local"
 
@@ -17,7 +18,12 @@ volume master {
 
 wireless wlan0 {
     format_up = "W (%essid at%quality)"
-    format_down = "W: down"
+    format_down = "W down"
+}
+
+wireless wg0 {
+    format_up = "T (home)"
+    format_down = "T down"
 }
 
 battery 0 {
