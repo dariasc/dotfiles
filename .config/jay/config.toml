@@ -154,4 +154,4 @@ match.app-id = "spotify"
 action = { type = "move-to-workspace", name = "9" }
 
 [xwayland]
-enabled = false
+enabled = true
